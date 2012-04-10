@@ -1,0 +1,19 @@
+This project is for extracting entities like Author, Abstract etc from a particular domain[GIS] of web pages.
+
+Software Requirements:
+1. Java 6 or latest
+2. GATE 6 or latest(see gate.ac.uk)
+3. MongoDB(java driver)
+
+Steps:
+1. Install GATE(General Architecture for Text Engineering) on your system.[See http://gate.ac.uk/download/]
+2. See src/Madaap.java (starting point of application)
+
+2.Referenced Libraries:
+2.1 All jar and zip files in bin and lib folders of GATE.
+2.2 Libraries from Apache HttpComponents[See http://hc.apache.org/downloads.cgi]
+2.3 JSON from org.json[See http://www.docjar.com/jar/json-org.jar or http://www.json.org/java/]
+2.4 MongoDB java driver[See https://github.com/mongodb/mongo-java-driver/downloads]
+2.5 delicious.jar[See http://sourceforge.net/projects/delicious-java/]
+
+Note: Program assumes mongodb service running on system and throws exception otherwise.
