@@ -145,22 +145,7 @@ public class Extractor implements Runnable{
 	 * @throws Exception
 	 */
 	public static AnnotationSet doAnnotation(Document doc) throws Exception {
-		/*DefaultTokeniser tokeniser = (DefaultTokeniser) Factory.createResource("gate.creole.tokeniser.DefaultTokeniser");
-		DefaultGazetteer gazetteer = (DefaultGazetteer) Factory.createResource("gate.creole.gazetteer.DefaultGazetteer");
-		SentenceSplitter splitter = (SentenceSplitter) Factory.createResource("gate.creole.splitter.SentenceSplitter"); 
-		POSTagger tagger = (POSTagger) Factory.createResource("gate.creole.POSTagger");
-		ANNIETransducer transducer = (ANNIETransducer) Factory.createResource("gate.creole.ANNIETransducer");
-		OrthoMatcher matcher = (OrthoMatcher) Factory.createResource("gate.creole.orthomatcher.OrthoMatcher");
-		Morph morpher = (Morph) Factory.createResource("gate.creole.morph.Morph");
-		SerialAnalyserController controller = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController");
-		*/
 		System.out.println("annotating...");
-		/*Corpus corpus = null;
-		try {
-			corpus = Factory.newCorpus("corpus madaap");
-		} catch (ResourceInstantiationException e1) {
-			e1.printStackTrace();
-		}*/
 		corpus.add(doc);
 		controller.add(deletor);
 		controller.add(tokeniser);

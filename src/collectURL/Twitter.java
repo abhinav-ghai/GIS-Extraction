@@ -3,6 +3,7 @@ package collectURL;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TimerTask;
@@ -47,8 +48,14 @@ public class Twitter extends TimerTask implements Runnable{
 			JSONArray resultArray = twitterJson.getJSONArray("results");
 			for(int i=0;i<resultArray.length();i++){
 				urls = resultArray.getJSONObject(i).getJSONObject("entities").getJSONArray("urls");
-				// Add URL in queue,implement queue.put(URL)
-				System.out.println(urls.toString());
+				for (int j=0;j<urls.length();j++){
+					if (urls.get(j).toString()!=""){
+						URL currentURL = new URL(urls.getJSONObject(j).get("url").toString());
+						queue.put(currentURL);
+					}
+					else
+						System.out.println("empty url");
+				}
 			}
 		}
 	}
