@@ -2,7 +2,7 @@ import java.net.URL;
 import java.util.List;
 
 
-
+/* Incomplete - under progress*/
 public class Scheduler implements Runnable{
 	public void schedule(List<URL> queue,int item_count){
 		int i;
